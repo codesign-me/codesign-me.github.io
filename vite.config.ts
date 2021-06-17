@@ -27,21 +27,15 @@ export default defineConfig({
   },
   build: {
     target: "es2015",
+    outDir: "docs",
     rollupOptions: {
       input: {
         index: resolve(__dirname, "index.html"),
         preview: resolve(__dirname, "preview.html"),
       },
-      output: [
-        {
-          manualChunks: undefined,
-          dir: "dist",
-        },
-        {
-          manualChunks: undefined,
-          dir: "dist",
-        },
-      ],
+      output: {
+        manualChunks: undefined,
+      },
     },
   },
   optimizeDeps: {
