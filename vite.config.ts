@@ -8,10 +8,10 @@ function replaceHtmlModulePlugin(): PluginOption {
     apply: "build",
     enforce: "post",
     transformIndexHtml(html) {
-      return html
-        .replaceAll(`type="module"`, `defer`)
-        .replaceAll(`crossorigin`, ``)
-        .replaceAll(`rel="modulepreload"`, ``);
+      return html;
+        // .replaceAll(`type="module"`, `defer`)
+        // .replaceAll(`crossorigin`, ``)
+        // .replaceAll(`rel="modulepreload"`, ``);
     },
   };
 }
