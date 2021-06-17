@@ -1,0 +1,21 @@
+$emphasis-color: #292a2b;
+$converse-color: white;
+$link-color: orange;
+$version-color: gray;
+
+@mixin dialog-button($dark: true) {
+  width: 100px;
+  height: 30px;
+  margin: 0px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  @if $dark {
+    background-color: $emphasis-color;
+    color: $converse-color;
+  } @else {
+    background-color: $converse-color;
+    color: $emphasis-color;
+  }
+}
